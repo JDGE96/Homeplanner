@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#172033"><link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css"><title>My Home Planner</title>
+</head>
+<body>
+<header><div><p class="eyebrow">PERSONAL PLANNER</p><h1>🏠 My Home Planner</h1><p class="sub">Find a place. Know the real cost. Build your next chapter.</p></div>
+<div class="actions"><button class="secondary" id="exportBtn">⬇ Export</button><label class="secondary file">⬆ Import<input id="importFile" type="file" accept=".json" hidden></label></div></header>
+<nav id="tabs">
+<button class="tab active" data-section="dashboard">Dashboard</button><button class="tab" data-section="apartments">Apartments</button>
+<button class="tab" data-section="budget">Budget</button><button class="tab" data-section="movein">Move-In</button>
+<button class="tab" data-section="checklist">Checklist</button><button class="tab" data-section="settings">Settings</button>
+</nav>
+<main>
+<section id="dashboard" class="section active">
+<div class="hero-grid"><div class="card hero"><p class="eyebrow">YOUR NEXT HOME</p><h2>One step at a time.</h2><p>Separate advertised rent from the real cost, compare apartments, and track what you need to move.</p><button class="primary" data-go="apartments">＋ Add an Apartment</button></div>
+<div class="card"><h3>Move-In Fund</h3><div class="big" id="dashSavings">$0</div><div class="progress"><span id="dashProgress"></span></div><p class="muted" id="dashSavingsText"></p></div></div>
+<div class="stats"><div class="card"><span>Monthly take-home</span><strong id="dashIncome">$0</strong></div><div class="card"><span>Comfortable housing</span><strong id="dashComfort">$0</strong></div><div class="card"><span>Stretch housing</span><strong id="dashStretch">$0</strong></div><div class="card"><span>Absolute ceiling</span><strong id="dashMax">$0</strong></div></div>
+<div class="card"><div class="heading"><div><p class="eyebrow">SAVED PLACES</p><h2>Your Apartments</h2></div><button class="secondary" data-go="apartments">View all</button></div><div id="dashboardApartments" class="apts"></div></div>
+</section>
+
+<section id="apartments" class="section"><div class="heading"><div><p class="eyebrow">APARTMENT TRACKER</p><h2>Compare the real cost</h2><p class="muted">Save listings and see whether they fit your actual budget.</p></div><button class="primary" id="newApartmentBtn">＋ New Apartment</button></div><div id="apartmentList" class="apts"></div></section>
+
+<section id="budget" class="section"><div class="heading"><div><p class="eyebrow">BUDGET</p><h2>What can you actually afford?</h2></div></div>
+<div class="grid2"><div class="card"><h3>Income</h3><label>Monthly take-home<input id="income" type="number" min="0" step=".01"></label></div>
+<div class="card"><h3>Monthly Bills</h3><div id="billInputs"></div><button class="secondary small" id="addBillBtn">＋ Add bill</button></div></div>
+<div class="results"><div class="card"><span>Comfortable</span><strong id="budgetComfort">$0</strong><small>30% target after bills.</small></div><div class="card"><span>Stretch</span><strong id="budgetStretch">$0</strong><small>35% target after bills.</small></div><div class="card"><span>Absolute maximum</span><strong id="budgetMax">$0</strong><small>40% target after bills.</small></div></div>
+<div class="card"><h3>How it works</h3><p class="muted">This planner uses 30%, 35%, and 40% of take-home pay as starting housing targets, then subtracts your entered monthly bills. These are planning targets, not financial advice.</p></div>
+</section>
+
+<section id="movein" class="section"><div class="heading"><div><p class="eyebrow">MOVE-IN FUND</p><h2>How much cash do you need?</h2></div></div>
+<div class="grid2"><div class="card"><h3>Available & Goal</h3><label>Current moving fund<input id="savings" type="number" min="0" step=".01"></label><label>Target moving fund<input id="savingsGoal" type="number" min="0" step=".01"></label><div class="progress large"><span id="moveProgress"></span></div><p id="moveProgressText" class="muted"></p></div>
+<div class="card"><h3>Estimated Move-In Costs</h3><div id="moveInputs"></div><button class="secondary small" id="addMoveBtn">＋ Add cost</button><div class="total"><span>Estimated total</span><strong id="moveTotal">$0</strong></div></div></div>
+</section>
+
+<section id="checklist" class="section"><div class="heading"><div><p class="eyebrow">APARTMENT CHECKLIST</p><h2>Don't get surprised by the fine print</h2></div></div>
+<div class="checkgrid"><div class="card"><h3>Before Applying</h3><div id="generalChecklist"></div></div><div class="card"><h3>Apartment Tour</h3><div id="tourChecklist"></div></div><div class="card"><h3>Lease & Move-In</h3><div id="leaseChecklist"></div></div></div></section>
+
+<section id="settings" class="section"><div class="heading"><div><p class="eyebrow">SETTINGS</p><h2>Your information</h2><p class="muted">Saved in this browser. Use Export for a backup.</p></div></div>
+<div class="card narrow"><label>Your name<input id="userName" placeholder="Optional"></label><label>Target move date<input id="moveDate" type="date"></label><label>Preferred area<input id="area" placeholder="Example: Bedford / Lynchburg"></label><label>Housing notes<textarea id="housingNotes" rows="4" placeholder="1 bedroom, pet-friendly, parking, etc."></textarea></label><button class="primary" id="saveSettingsBtn">Save Settings</button></div></section>
+</main>
+
+<div id="modal" class="modal hidden"><div class="modalbox"><div class="heading"><div><p class="eyebrow">APARTMENT</p><h2 id="modalTitle">Add Apartment</h2></div><button class="icon" id="closeModal">✕</button></div>
+<form id="apartmentForm"><input type="hidden" id="apartmentId">
+<div class="grid2"><label>Property name<input id="aName" required></label><label>Listing URL<input id="aUrl" type="url" placeholder="https://..."></label><label>Advertised rent<input id="aRent" type="number" min="0" required></label><label>Security deposit<input id="aDeposit" type="number" min="0"></label><label>Application / admin fees<input id="aAdmin" type="number" min="0"></label><label>Other one-time costs<input id="aOneTime" type="number" min="0"></label></div>
+<h3>Mandatory Monthly Fees</h3><div class="grid2"><label>Amenity fee<input id="aAmenity" type="number" min="0"></label><label>Trash<input id="aTrash" type="number" min="0"></label><label>Water / sewer<input id="aWater" type="number" min="0"></label><label>Parking<input id="aParking" type="number" min="0"></label><label>Required internet<input id="aInternet" type="number" min="0"></label><label>Other mandatory fees<input id="aOtherFee" type="number" min="0"></label></div>
+<h3>Estimated Monthly Expenses</h3><div class="grid2"><label>Electric<input id="aElectric" type="number" min="0"></label><label>Renters insurance<input id="aInsurance" type="number" min="0"></label><label>Other utilities<input id="aUtilities" type="number" min="0"></label></div>
+<label>Notes<textarea id="aNotes" rows="4" placeholder="Questions, red flags, what you liked..."></textarea></label><label>Status<select id="aStatus"><option>Interested</option><option>Favorite</option><option>Touring</option><option>Applied</option><option>Approved</option><option>Rejected</option><option>Too Expensive</option></select></label>
+<div class="live"><span>TRUE MONTHLY COST</span><strong id="liveTotal">$0</strong><small id="liveBudgetMessage"></small></div><div class="modalactions"><button type="button" class="secondary" id="cancelApartment">Cancel</button><button class="primary">Save Apartment</button></div>
+</form></div></div>
+<script src="app.js"></script></body></html>
