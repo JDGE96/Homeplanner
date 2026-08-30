@@ -1,0 +1,242 @@
+{
+  "settings": {
+    "income": 4004,
+    "savings": 0,
+    "savingsGoal": 4000,
+    "userName": "",
+    "moveDate": "",
+    "area": "",
+    "housingNotes": ""
+  },
+  "bills": [
+    {
+      "name": "Discord",
+      "amount": "12"
+    },
+    {
+      "name": "Prime",
+      "amount": "15"
+    },
+    {
+      "name": "Phone",
+      "amount": "55"
+    },
+    {
+      "name": "Internet",
+      "amount": "55"
+    },
+    {
+      "name": "Spotify",
+      "amount": "23"
+    },
+    {
+      "name": "Xbox",
+      "amount": "22"
+    },
+    {
+      "name": "Google Drive",
+      "amount": "3"
+    },
+    {
+      "name": "HBO",
+      "amount": "3"
+    },
+    {
+      "name": "Hulu",
+      "amount": "1"
+    },
+    {
+      "name": "Insurance",
+      "amount": "110"
+    }
+  ],
+  "moveCosts": [
+    {
+      "name": "First month's rent",
+      "amount": 0
+    },
+    {
+      "name": "Security deposit",
+      "amount": 0
+    },
+    {
+      "name": "Application / admin fees",
+      "amount": 0
+    },
+    {
+      "name": "Utility deposits / setup",
+      "amount": 0
+    },
+    {
+      "name": "Moving truck / movers",
+      "amount": 0
+    },
+    {
+      "name": "Furniture / household items",
+      "amount": 0
+    }
+  ],
+  "apartments": [
+    {
+      "id": "d54332fa-dc64-4ecb-98e7-40243a6cccaa",
+      "name": "The Retreat: The Ridge",
+      "url": "https://www.retreatroanoke.com/brochure?FloorPlanIDs=0,2049105",
+      "rent": "1823",
+      "deposit": "1100",
+      "admin": "50",
+      "oneTime": "700",
+      "amenity": "45",
+      "trash": "25",
+      "water": "3",
+      "parking": "",
+      "internet": "",
+      "otherFee": "",
+      "electric": "",
+      "insurance": "15",
+      "utilities": "35",
+      "notes": "First Month is free if applied before 9/15",
+      "status": "Touring"
+    },
+    {
+      "id": "67d7166a-c988-4155-9c14-60193dbd6aa2",
+      "name": "Village Green: 6837 Village Green Dr, Roanoke, VA 24019",
+      "url": "https://www.realtor.com/rentals/details/6837-Village-Green-Dr_Roanoke_VA_24019_M62954-99931",
+      "rent": "1749",
+      "deposit": "",
+      "admin": "",
+      "oneTime": "",
+      "amenity": "",
+      "trash": "",
+      "water": "",
+      "parking": "",
+      "internet": "",
+      "otherFee": "",
+      "electric": "",
+      "insurance": "",
+      "utilities": "",
+      "notes": "",
+      "status": "Interested"
+    },
+    {
+      "id": "7d1fa33c-8e2a-4bc5-a7a7-10298867dcfe",
+      "name": "The Grandin Agency: 1344 Mabry Ave SE, Roanoke, VA 24014",
+      "url": "https://www.realtor.com/rentals/details/1344-Mabry-Ave-SE_Roanoke_VA_24014_M64889-73822",
+      "rent": "1350",
+      "deposit": "",
+      "admin": "",
+      "oneTime": "",
+      "amenity": "",
+      "trash": "",
+      "water": "",
+      "parking": "",
+      "internet": "",
+      "otherFee": "",
+      "electric": "",
+      "insurance": "",
+      "utilities": "",
+      "notes": "",
+      "status": "Touring"
+    },
+    {
+      "id": "19f5a9ea-c2f1-442d-bd83-353b1038a3e9",
+      "name": "4872 Lantern St NW, Roanoke, VA",
+      "url": "https://www.facebook.com/share/186NbnQ9vD/",
+      "rent": "730",
+      "deposit": "",
+      "admin": "",
+      "oneTime": "",
+      "amenity": "",
+      "trash": "",
+      "water": "",
+      "parking": "",
+      "internet": "",
+      "otherFee": "",
+      "electric": "",
+      "insurance": "",
+      "utilities": "",
+      "notes": "",
+      "status": "Interested"
+    },
+    {
+      "id": "f8930df8-4621-4e4c-bf56-f3edef37682b",
+      "name": "6050 Apollo Dr, Roanoke, VA",
+      "url": "https://www.facebook.com/share/1B68oBTDfk/",
+      "rent": "1450",
+      "deposit": "",
+      "admin": "",
+      "oneTime": "",
+      "amenity": "",
+      "trash": "",
+      "water": "",
+      "parking": "",
+      "internet": "",
+      "otherFee": "",
+      "electric": "",
+      "insurance": "",
+      "utilities": "",
+      "notes": "",
+      "status": "Interested"
+    },
+    {
+      "id": "36d4e304-1195-4c2a-af86-b24a0407c95d",
+      "name": "8110 Golden Oak Ln, Roanoke, VA",
+      "url": "https://www.facebook.com/share/1CriXZg7Xs/",
+      "rent": "1090",
+      "deposit": "",
+      "admin": "",
+      "oneTime": "",
+      "amenity": "",
+      "trash": "",
+      "water": "",
+      "parking": "",
+      "internet": "",
+      "otherFee": "",
+      "electric": "",
+      "insurance": "",
+      "utilities": "",
+      "notes": "",
+      "status": "Interested"
+    },
+    {
+      "id": "4bc3cc31-be49-4537-b9b3-0262ed968e9a",
+      "name": "1735 20th St NE, Roanoke, VA",
+      "url": "https://www.facebook.com/marketplace/item/1080737581562971?ref=category_feed&referral_code=undefined&referral_story_type=listing&tracking=%7B%22qid%22%3A%22-6252668910656075562%22%2C%22mf_story_key%22%3A%2228350023877948310%22%2C%22commerce_rank_obj%22%3A%22%7B%5C%22target_id%5C%22%3A28350023877948310%2C%5C%22target_type%5C%22%3A0%2C%5C%22primary_position%5C%22%3A2%2C%5C%22ranking_signature%5C%22%3A4688620273957869636%2C%5C%22ranking_region%5C%22%3A%5C%22ncg%5C%22%2C%5C%22ranking_request_id%5C%22%3A4802609946537331636%2C%5C%22commerce_channel%5C%22%3A504%2C%5C%22value%5C%22%3A0.0068311961059957%2C%5C%22candidate_retrieval_source_map%5C%22%3A%7B%5C%2228350023877948310%5C%22%3A204%7D%2C%5C%22candidate_write_path_source_map%5C%22%3A[]%2C%5C%22candidate_seller_rerank_version_id_map%5C%22%3A%7B%5C%2228350023877948310%5C%22%3A0%7D%2C%5C%22is_prefetch%5C%22%3Afalse%7D%22%7D",
+      "rent": "779",
+      "deposit": "",
+      "admin": "",
+      "oneTime": "",
+      "amenity": "",
+      "trash": "",
+      "water": "",
+      "parking": "",
+      "internet": "",
+      "otherFee": "",
+      "electric": "",
+      "insurance": "",
+      "utilities": "",
+      "notes": "",
+      "status": "Interested"
+    },
+    {
+      "id": "9f348b5a-0b2c-44e1-947d-8cb059910ac0",
+      "name": "2417 Daleton Blvd NE, Roanoke, VA",
+      "url": "https://www.facebook.com/share/1EbG6LEJDU/",
+      "rent": "500",
+      "deposit": "",
+      "admin": "",
+      "oneTime": "",
+      "amenity": "",
+      "trash": "",
+      "water": "",
+      "parking": "",
+      "internet": "",
+      "otherFee": "",
+      "electric": "",
+      "insurance": "",
+      "utilities": "",
+      "notes": "",
+      "status": "Interested"
+    }
+  ],
+  "checks": {}
+}
