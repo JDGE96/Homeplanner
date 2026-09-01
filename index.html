@@ -10,7 +10,7 @@
 <div class="actions"><button class="secondary" id="exportBtn">⬇ Export</button><label class="secondary file">⬆ Import<input id="importFile" type="file" accept=".json" hidden></label></div></header>
 <nav id="tabs">
 <button class="tab active" data-section="dashboard">Dashboard</button><button class="tab" data-section="apartments">Apartments</button>
-<button class="tab" data-section="budget">Budget</button><button class="tab" data-section="movein">Move-In</button>
+<button class="tab" data-section="budget">Budget</button><button class="tab" data-section="buying">Buying</button><button class="tab" data-section="movein">Move-In</button>
 <button class="tab" data-section="checklist">Checklist</button><button class="tab" data-section="settings">Settings</button>
 </nav>
 <main>
@@ -28,6 +28,83 @@
 <div class="card"><h3>Monthly Bills</h3><div id="billInputs"></div><button class="secondary small" id="addBillBtn">＋ Add bill</button></div></div>
 <div class="results"><div class="card"><span>Comfortable</span><strong id="budgetComfort">$0</strong><small>30% target after bills.</small></div><div class="card"><span>Stretch</span><strong id="budgetStretch">$0</strong><small>35% target after bills.</small></div><div class="card"><span>Absolute maximum</span><strong id="budgetMax">$0</strong><small>40% target after bills.</small></div></div>
 <div class="card"><h3>How it works</h3><p class="muted">This planner uses 30%, 35%, and 40% of take-home pay as starting housing targets, then subtracts your entered monthly bills. These are planning targets, not financial advice.</p></div>
+</section>
+
+
+<section id="buying" class="section">
+<div class="heading"><div><p class="eyebrow">HOME BUYING</p><h2>Could you afford to buy?</h2><p class="muted">Estimate the real monthly cost of a home, including taxes, insurance, HOA, and a roommate contribution.</p></div></div>
+
+<div class="grid2">
+  <div class="card">
+    <h3>Purchase & Loan</h3>
+    <label>Home price<input id="buyPrice" type="number" min="0" step="1000"></label>
+    <label>Down payment<input id="buyDown" type="number" min="0" step="1000"></label>
+    <label>Interest rate (%)<input id="buyRate" type="number" min="0" step=".01"></label>
+    <label>Loan term
+      <select id="buyTerm">
+        <option value="30">30 years</option>
+        <option value="25">25 years</option>
+        <option value="20">20 years</option>
+        <option value="15">15 years</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="card">
+    <h3>Other Monthly Costs</h3>
+    <label>Property taxes / year<input id="buyTaxes" type="number" min="0" step="100"></label>
+    <label>Homeowners insurance / year<input id="buyInsurance" type="number" min="0" step="50"></label>
+    <label>HOA / month<input id="buyHoa" type="number" min="0" step="10"></label>
+    <label>Utilities / month<input id="buyUtilities" type="number" min="0" step="10"></label>
+  </div>
+</div>
+
+<div class="grid2">
+  <div class="card">
+    <h3>Roommate</h3>
+    <label>Roommate monthly contribution<input id="buyRoommate" type="number" min="0" step="25"></label>
+    <p class="muted">This is treated as money toward the household cost. It is not counted as your income for the affordability check.</p>
+  </div>
+  <div class="card">
+    <h3>Buying Cash</h3>
+    <label>Estimated closing costs (%)<input id="buyClosingPct" type="number" min="0" step=".1"></label>
+    <label>Extra cash for repairs / reserves<input id="buyReserves" type="number" min="0" step="100"></label>
+  </div>
+</div>
+
+<div class="results">
+  <div class="card"><span>Principal & interest</span><strong id="buyPI">$0</strong></div>
+  <div class="card"><span>Total monthly housing</span><strong id="buyTotal">$0</strong></div>
+  <div class="card"><span>Your cost after roommate</span><strong id="buyShare">$0</strong></div>
+</div>
+
+<div class="grid2">
+  <div class="card">
+    <h3>Upfront Cash Needed</h3>
+    <div class="meta">
+      <div><small>Down payment</small><span id="buyDownOut">$0</span></div>
+      <div><small>Estimated closing costs</small><span id="buyClosingOut">$0</span></div>
+      <div><small>Reserves / repairs</small><span id="buyReserveOut">$0</span></div>
+      <div><small>Total estimated cash</small><strong id="buyCashOut">$0</strong></div>
+    </div>
+    <p class="muted" id="buyCashMessage"></p>
+  </div>
+
+  <div class="card">
+    <h3>Affordability Check</h3>
+    <div class="live">
+      <span>YOUR MONTHLY COST</span>
+      <strong id="buyAfford">$0</strong>
+      <small id="buyBudgetMessage"></small>
+    </div>
+    <p class="muted">Uses the same comfortable / stretch / maximum housing targets from your Budget tab. PMI is estimated when the down payment is below 20%.</p>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Quick Notes</h3>
+  <p class="muted">This is a planning calculator, not a mortgage quote. It does not include every possible ownership cost, such as maintenance, major repairs, utilities that you haven't entered, or lender-specific fees. Before buying, get an actual loan estimate and insurance/tax figures.</p>
+</div>
 </section>
 
 <section id="movein" class="section"><div class="heading"><div><p class="eyebrow">MOVE-IN FUND</p><h2>How much cash do you need?</h2></div></div>
